@@ -28,6 +28,7 @@ import { StatsModule } from './modules/stats/stats.module';
 import { TrendMonth } from './entities/trend-month.entity';
 import { Tutorials } from './entities/tutorials.entity';
 import { TutorialsModule } from './modules/tutorials/tutorials.module';
+import { InserjeuneModule } from './modules/inserjeune/inserjeune.module';
 
 
 
@@ -74,6 +75,7 @@ import { TutorialsModule } from './modules/tutorials/tutorials.module';
     SchoolModule,
     SurveyModule,
     PedagogyCertifiedModule,
+    InserjeuneModule,
     WorkshopStatusModule,
     SchoolsByTypeModule,
     SchoolConnectivityModule,
@@ -84,6 +86,7 @@ import { TutorialsModule } from './modules/tutorials/tutorials.module';
     InternetConnectivityTrendModule,
     StatsModule,
     TutorialsModule,
+    
   ],
 
 })
