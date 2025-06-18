@@ -26,6 +26,8 @@ import { ComputerLabsStatus } from './entities/computer-labs-status.entity';
 import { Stat } from './entities/stat.entity';
 import { StatsModule } from './modules/stats/stats.module';
 import { TrendMonth } from './entities/trend-month.entity';
+import { Tutorials } from './entities/tutorials.entity';
+import { TutorialsModule } from './modules/tutorials/tutorials.module';
 
 
 
@@ -47,7 +49,8 @@ import { TrendMonth } from './entities/trend-month.entity';
           ElectricalConnectivity,
           InternetConnectivityTrend,
           Stat,
-          TrendMonth
+          TrendMonth,
+          Tutorials
           
         ],
         // ssl: {
@@ -79,7 +82,8 @@ import { TrendMonth } from './entities/trend-month.entity';
     ElectricalConnectivityModule,
     ComputerLabsStatusModule,
     InternetConnectivityTrendModule,
-    StatsModule
+    StatsModule,
+    TutorialsModule,
   ],
 
 })
