@@ -12,6 +12,25 @@ export class StatsService {
     private statRepository: Repository<Stat>,
   ) {}
 
+  // Inside StatsService
+async getAllStats() {
+  const stats = await this.statRepository.find();
+  return { message: 'Statistics fetched successfully', data: stats };
+}
+
+async getStatByType(type: string) {
+  console.log('Requested stat type:', type); // Debug
+
+  const stat = await this.statRepository.findOne({ where: { type } });
+
+  if (!stat) {
+    throw new NotFoundException(`Statistic with type "${type}" not found`);
+  }
+
+  return { message: 'Statistic fetched successfully', data: stat };
+}
+
+
   async updateStat(dto: UpdateStatDto) {
     let stat = await this.statRepository.findOne({ where: { type: dto.type } });
 
